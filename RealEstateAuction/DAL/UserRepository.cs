@@ -20,7 +20,19 @@ namespace RealEstateAuction.DAL
         {
             return context.Users.SingleOrDefault(u => u.Id.Equals(id));
         }
-
+        public bool AddUser(User user)
+        {
+            try
+            {
+                context.Users.Add(user);
+                context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
         public bool UpdateUser(User user)
         {
             try
