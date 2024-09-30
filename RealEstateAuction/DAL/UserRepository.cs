@@ -34,7 +34,24 @@ namespace RealEstateAuction.DAL
                 Console.WriteLine(ex.Message);
                 return false;
             }
+<<<<<<< HEAD
     
+=======
+        }
+        public void UpdatePassword(string email, string newPwd)
+        {
+            try
+            {
+                var user = GetUserByEmail(email);
+                user.Password = newPwd;
+                context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+>>>>>>> 7b47fcb31a9451ffe9df9a441c7b3ca54fbaceee
 
     }
 }
