@@ -34,7 +34,7 @@ namespace RealEstateAuction.DAL
                 Console.WriteLine(ex.Message);
                 return false;
             }
-        }
+    
 
     }
 }
